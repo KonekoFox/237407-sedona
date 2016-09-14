@@ -4,6 +4,7 @@ body {
     line-height: 21px;
     font-weight: 500;
     color: #000000;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     text-transform: uppercase;
     background-color: #f2f2f2;
 }
@@ -82,7 +83,8 @@ body {
     height: 508px;
     
     font-size: 0;
-    background: url(../img/main-bg-photo.jpg);
+    background: url(../img/main-bg-photo.jpg) no-repeat;
+    background-size: 100% auto;
 }
 
 .intro-message {
@@ -101,7 +103,7 @@ body {
     height: 57px;
 }
 
-.features-main {
+.features-caption {
     width: 100%;
     min-height: 217px;
     padding-top: 60px;
@@ -110,7 +112,7 @@ body {
     text-align: center;
 }
 
-.features h1 {
+.features-caption h1 {
     font-size: 21px;
     line-height: 26px;
     font-weight: 600;
@@ -119,5 +121,380 @@ body {
 .features p {
     font-size: 14px;
     line-height: 26px;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    min-height: 256px;
+}
+
+.advice-row {
+    min-height: 330px;
+}
+
+.feature-item {
+    display: table-cell;
+    vertical-align: middle;
+    width: 33%;
+    min-height: 256px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    
+    text-align: center;
+    color: #333333;
+    background-color: #eeeeee;
+}
+
+.main-feature .feature-item {
+    color: #ffffff;
+    background-color: #81b3d2;
+}
+
+.feature-item-photo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 67%;
+    min-height: 256px;
+}
+
+.main-feature .streets {
+    background: url(../img/streets.jpg) no-repeat center right;
+    background-size: 100% auto;
+}
+
+.main-feature .bridge {
+    background: url(../img/bridge.jpg) no-repeat center;
+    background-size: 100% auto;
+}
+
+.feature-advice-title,
+.feature-item-title {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+/* Ряд советов */
+
+.feature-advice {
+    position: relative;
+    display: table-cell;
+    width: 33%;
+    vertical-align: top;
+    min-height: 330px;
+    padding: 0 50px;
+    padding-top: 160px;
+    box-sizing: border-box;
+    
+    text-align: center;
     color: #333333;
 }
+
+.feature-advice::before {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    content: "";
+    display: block;    
+}
+
+.feature-advice:first-child::before {
+    width: 75px;
+    height: 72px;
+    margin-left: -37px;
+    background-image: url(../img/spritesheet.png);
+    background-position: -10px -10px;
+}
+
+.feature-advice:nth-child(2)::before {
+    width: 74px;
+    height: 70px;
+    margin-left: -37px;
+    background-image: url(../img/spritesheet.png);
+    background-position: -10px -102px; 
+}
+
+.feature-advice:nth-child(3)::before {
+    width: 64px;
+    height: 76px;
+    margin-left: -32px;
+    background-image: url(../img/spritesheet.png);
+    background-position: -10px -192px; 
+}
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-advice-1 {
+    width: 75px;
+    height: 72px;
+    background-position: -10px -10px;
+}
+
+.sprite-advice-2 {
+    width: 74px;
+    height: 70px;
+    background-position: -10px -102px;
+}
+
+.sprite-advice-3 {
+    width: 64px;
+    height: 76px;
+    background-position: -10px -192px;
+}
+
+/* Зантересовались? */
+
+.trip-plan {
+    position: relative;
+    height: 290px;
+    padding-top: 55px;
+    box-sizing: border-box;
+    margin-bottom: 473px;
+    
+    text-align: center;
+}
+
+.trip-plan b {
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.trip-plan p {
+    margin-top: 35px;
+}
+
+.hotel-search {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -284px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 568px;
+    min-height: 86px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #766357;
+}
+
+.map {
+    position: absolute;
+    top: 290px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 593px;
+    background: url(../img/map.jpg) no-repeat top center;
+    background-size: cover;
+    z-index: 10;
+}
+
+/* Футер */
+
+.main-footer {
+    position: relative;
+    display: table;
+    width: 100%;
+    min-height: 120px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 20;
+}
+
+.main-footer section {
+    display: table-cell;
+    vertical-align: middle;
+    width: 33%;
+    
+    text-align: center;
+    font-size: 0;
+}
+
+.hashtag {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+}
+
+.social-net-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-net-item {
+    display: inline-block;
+    text-align: middle;
+    margin-right: 6px;
+}
+
+.social-net-link {
+    display: block;
+    width: 45px;
+    height: 48px;
+    background-color: #81b3d2;
+}
+
+.footer-copyright span {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.footer-copyright span,
+.footer-copyright img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Форма поиска */
+
+.modal-content {
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    margin-left: -284px;
+    
+    width: 568px;
+    min-height: 395px;
+    padding: 55px;
+    box-sizing: border-box;
+    z-index: 15;
+    
+    text-align: left;
+    background-color: #ffffff;
+    box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+    
+    display: block;
+}
+
+.form-section {
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.modal-label {
+    display: table-cell;
+    width: 114px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.modal-field {
+    display: table-cell;
+    width: 344px;
+    height: 38px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.travelers {
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    
+    text-align: center;
+}
+
+.modal-field,
+.travelers {
+    font-size: 14px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #000000;
+    background-color: #f2f2f2;
+    border: 0;
+    outline: none; 
+}
+
+.modal-field:hover,
+.travelers:hover {
+    background-color: #ebebeb;
+}
+
+.modal-field:focus,
+.travelers:focus {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+}
+
+.modal-btn {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    
+    font-size: 0;
+    outline: 0;
+    border: 0;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.modal-btn,
+.travelers {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.adults-label,
+.children-label,
+.travelers-count {
+    display: table-cell;
+    width: 114px;
+    vertical-align: middle;
+}
+
+.children-label {
+    padding-right: 27px;
+    text-align: right;
+    box-sizing: border-box;
+    
+}
+
+.travelers-count {
+    font-size: 0;
+}
+
+.modal-submit-btn {
+    display: block;
+    width: 358px;
+    height: 58px;
+    margin: 54px auto 0 auto;
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 58px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    background-color: #81b3d2;
+    cursor: pointer;
+}
+
+.modal-submit-btn:hover {
+    background-color: #669ec0;
+}
+
+.modal-submit-btn:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+}
+
+
