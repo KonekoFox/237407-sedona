@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Sedona</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="innerpage-wrapper">
+            
+            <header class="main-header">
+                <nav class="main-navigation">
+                    <a href="index.html"><img class="logo" src="img/logo.png" width="138" height="70" alt="The City of Sedona"></a>
+                    <ul class="main-menu">
+                        <li class="main-menu-item">
+                            <a href="#">Информация</a>
+                        </li>
+                        <li class="main-menu-item">
+                            <a href="#">Видео и фото</a>
+                        </li>
+                        <li class="main-menu-item">
+                            <a href="#">Карта штата</a>
+                        </li>
+                        <li class="main-menu-item">
+                            <a href="hotels.html">Гостиницы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main class="innerpage-content">
+                <div class="filters-block">
+                    <form class="dwelling-choice" action="#" method="post">
+                        <fieldset class="infrastrcture">
+                            <legend>Инфраструктура:</legend>
+                            
+                            <input class="checkbox" type="checkbox" id="pool" name="pool" checked>
+                            <label class="filter-label" for="pool">Бассейн</label>
+                            
+                            <input class="checkbox" type="checkbox" id="parking" name="parking">
+                            <label class="filter-label" for="parking">Парковка</label>
+                            
+                            <input class="checkbox" type="checkbox" id="wi-fi" name="wi-fi">
+                            <label class="filter-label" for="wi-fi">Бассейн</label>
+                        </fieldset>
+                            
+                        <fieldset class="dwelling-type">
+                            <legend>Тип жилья:</legend>
+                            
+                            <input class="checkbox" type="checkbox" id="hotel" name="hotel" checked>
+                            <label class="filter-label" for="hotel">Гостиница</label>
+                            
+                            <input class="checkbox" type="checkbox" id="motel" name="motel" checked>
+                            <label class="filter-label" for="motel">Мотель</label>
+                            
+                            <input class="checkbox" type="checkbox" id="apartment" name="apartment" checked>
+                            <label class="filter-label" for="apartment">Апартаменты</label>
+                        </fieldset>
+                        
+                        <fieldset class="price">
+                            <legend>Стоимость в сутки:</legend>
+                            <div class="price-controls">
+                                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                            </div>
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="range-toggle range-toggle-min"></div>
+                                <div class="range-toggle range-toggle-max"></div>
+                            </div>
+                            <input class="choose-dwelling" type="submit" value="Показать">
+                        </fieldset>
+                    </form>
+                </div>
+                
+                <div class="dwelling-choice-result">
+                    <h1 class="dwelling-found">Найдено: 3</h1>
+                    <ul class="sort-order">
+                        <h2 class="sort">Сортировка</h2>
+                        <li>
+                            <a class="sort-order-link">по цене</a>
+                        </li>
+                        <li>
+                            <a class="sort-order-link" href="#">по типу</a>
+                        </li>
+                        <li>
+                            <a class="sort-order-link" href="#">по рейтингу</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <article class="dwelling">
+                    <div class="dwelling-photo">
+                        <img src="#">
+                    </div>
+                    <div class="dwelling-info">
+                        <h3 class="dwelling-name">Amara Resort & Spa</h3>
+                        <span class="dwelling-type">Гостиница</span>
+                        <span class="dwelling-minprice">От 3500 р.</span>
+                        <a class="detailed-info" href="#">Подробнее</a>
+                        <a class="book" href="#">Забронировать</a>
+                    </div>
+                    <div class="dwelling-rating">
+                        <div class="stars"></div>
+                        <div class="rating">Рейтинг: 8,5</div>
+                    </div>
+                </article>
+                
+                <article class="dwelling">
+                    <div class="dwelling-photo">
+                        <img src="#">
+                    </div>
+                    <div class="dwelling-info">
+                        <h3 class="dwelling-name">Desert Quail Inn</h3>
+                        <span class="dwelling-type">Мотель</span>
+                        <span class="dwelling-minprice">От 2000 р.</span>
+                        <a class="detailed-info" href="#">Подробнее</a>
+                        <a class="book" href="#">Забронировать</a>
+                    </div>
+                    <div class="dwelling-rating">
+                        <div class="stars"></div>
+                        <div class="rating">Рейтинг: 8,9</div>
+                    </div>
+                </article>
+                
+                <article class="dwelling">
+                    <div class="dwelling-photo">
+                        <img src="#">
+                    </div>
+                    <div class="dwelling-info">
+                        <h3 class="dwelling-name">Villas at Poco Diablo</h3>
+                        <span class="dwelling-type">Апартаменты</span>
+                        <span class="dwelling-minprice">От 4000 р.</span>
+                        <a class="detailed-info" href="#">Подробнее</a>
+                        <a class="book" href="#">Забронировать</a>
+                    </div>
+                    <div class="dwelling-rating">
+                        <div class="stars"></div>
+                        <div class="rating">Рейтинг: 9,2</div>
+                    </div>
+                </article>
+            </main> 
+            
+            <footer class="main-footer">
+                <section class="footer-section">
+                    <a class="hashtag" href="#">#VISITSEDONA</a>
+                </section>
+                <section class="footer-social">
+                    <ul class="social-net-list">
+                        <li class="social-net-item">
+                            <a class="social-net-link" href="#">Twitter<span class="icon-twitter"></span></a>
+                        </li>
+                        <li class="social-net-item">
+                            <a class="social-net-link" href="#">Facebook<span class="icon-facebook"></span></a>
+                        </li>
+                        <li class="social-net-item">
+                            <a class="social-net-link" href="#">Youtube<span class="icon-youtube"></span></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-copyright">
+                    <span>Website by</span>
+                    <img src="img/html-logo.png" alt="HTML Academy">
+                </section>
+            </footer>
+    
+        </div>
+    </body>
+</html>

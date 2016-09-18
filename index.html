@@ -8,24 +8,26 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="site-wrapper">
+        <div class="homepage-wrapper">
             
             <header class="main-header">
-                <a><img class="logo" src="img/logo.png" width="138" height="70" alt="The City of Sedona"></a>
-                <ul class="main-navigation">
-                    <li class="main-navigation-item">
-                        <a href="#">Информация</a>
-                    </li>
-                    <li class="main-navigation-item">
-                        <a href="#">Видео и фото</a>
-                    </li>
-                    <li class="main-navigation-item">
-                        <a href="#">Карта штата</a>
-                    </li>
-                    <li class="main-navigation-item">
-                        <a href="#">Гостиницы</a>
-                    </li>
-                </ul>
+                <nav class="main-navigation">
+                    <a><img class="logo" src="img/logo.png" width="138" height="70" alt="The City of Sedona"></a>
+                    <ul class="main-menu">
+                        <li class="main-menu-item">
+                            <a href="#">Информация</a>
+                        </li>
+                        <li class="main-menu-item">
+                            <a href="#">Видео и фото</a>
+                        </li>
+                        <li class="main-menu-item">
+                            <a href="#">Карта штата</a>
+                        </li>
+                        <li class="main-menu-item">
+                            <a href="hotels.html">Гостиницы</a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
             
             <main class="homepage-content">
@@ -33,7 +35,6 @@
                     <img class="intro-message" src="img/introduction-message.png" width="458" height="352">
                     <p>Welcome to the gorgeous Sedona</p>
                     <p>"Because the Grand Canyon suks!"</p>
-                    <img class="mask" src="img/mask.png" width="1200" height="57">
                 </div>
                 
                 <div class="features">
@@ -48,7 +49,8 @@
                             <span class="feature-item-number">— №1 —</span>
                             <p class="feature-item-description">СЕДОНА — НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
                         </div>
-                        <div class="feature-item-photo streets"></div>
+                        <div class="feature-item-photo streets">
+                        <img src="img/streets.jpg" width="800" height="401" alt="Городской вид"></div>
                     </div>
 
                     <div class="row advice-row">
@@ -105,23 +107,25 @@
                             <div class="form-section">
                                 <label class="modal-label" for="arrival">Дата заезда:</label>
                                 <input class="modal-field" type="text" id="arrival" value="24 апреля 2016">
+                                <span class="icon-calendar"></span>
                             </div>
                             <div class="form-section">
                                 <label class="modal-label" for="departure">Дата выезда:</label>
                                 <input class="modal-field" type="text" id="departure" value="4 июля 2016">
+                                <span class="icon-calendar"></span>
                             </div>
                             <div class="form-section">
                                 <label class="modal-label adults-label" for="adults">Взрослые:</label>
                                 <div class="travelers-count">
-                                    <button class="modal-btn less-btn" type="button">меньше</button>
+                                    <button class="modal-btn less-btn" type="button">меньше<span class="icon-minus"></span></button>
                                     <input class="travelers" type="text" id="adults" value="2">
-                                    <button class="modal-btn more-btn" type="button">больше</button>
+                                    <button class="modal-btn more-btn" type="button">больше<span class="icon-plus"></span></button>
                                 </div>
                                 <label class="modal-label children-label" for="children">Дети:</label>
                                 <div class="travelers-count">
-                                    <button class="modal-btn less-btn" type="button">меньше</button>
+                                    <button class="modal-btn less-btn" type="button">меньше<span class="icon-minus"></span></button>
                                     <input class="travelers" type="text" id="children" value="0">
-                                    <button class="modal-btn more-btn" type="button">больше</button>
+                                    <button class="modal-btn more-btn" type="button">больше<span class="icon-plus"></span></button>
                                 </div>
                             </div>
                             <input class="modal-submit-btn" type="submit" value="Найти">
@@ -138,13 +142,13 @@
                 <section class="footer-social">
                     <ul class="social-net-list">
                         <li class="social-net-item">
-                            <a class="social-net-link" href="#">Твиттер</a>
+                            <a class="social-net-link" href="#">Twitter<span class="icon-twitter"></span></a>
                         </li>
                         <li class="social-net-item">
-                            <a class="social-net-link" href="#">Вконтакте</a>
+                            <a class="social-net-link" href="#">Facebook<span class="icon-facebook"></span></a>
                         </li>
                         <li class="social-net-item">
-                            <a class="social-net-link" href="#">Инстаграм</a>
+                            <a class="social-net-link" href="#">Youtube<span class="icon-youtube"></span></a>
                         </li>
                     </ul>
                 </section>
