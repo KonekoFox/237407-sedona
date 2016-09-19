@@ -199,7 +199,7 @@ body {
 }
 
 .feature-item-photo {
-    /*display: table-cell;*/
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
@@ -210,28 +210,14 @@ body {
     font-size: 0;
 }
 
-.feature-item-photo::before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
 .feature-item-photo img {
-    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:  block;
     width: 100%;
     height: auto;
-    vertical-align: middle;
-}
-
-/*.main-feature .streets {
-    background: url(../img/streets.jpg) no-repeat center right;
-    background-size: 100% auto;
-}*/
-
-.main-feature .bridge {
-    background: url(../img/bridge.jpg) no-repeat center;
-    background-size: 100% auto;
 }
 
 .feature-advice-title,
@@ -693,7 +679,7 @@ input[type="checkbox"]:checked + .filter-label::before {
 
 /* Фильтр с ценой */
 
-.price {
+.filters-block .price {
     width: 330px;
 }
 
@@ -702,47 +688,46 @@ input[type="checkbox"]:checked + .filter-label::before {
 }
 
 .price-controls {
-    position: relative;
-    /*width: 220px;*/
-    height: 36px;
-    margin-bottom: 20px;
+      position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+    
     font-size: 0;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
 .price-controls::after {
-    content: "";
-    position: absolute;
+  content: "";
+  position: absolute;
     top: 50%;
-    left: 50%;
+  left: 50%;
 
-    width: 2px;
-    height: 22px;
 
-    background: #ffffff;
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
     transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-    display: inline-block;
-    
-    width: 110px;
-    padding-left: 30px;
-    box-sizing: border-box;
+  display: inline-block;
 
-    font-size: 14px;
-    line-height: 38px;
-    vertical-align: top;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-/*.price-controls .min-price,
+.price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
   padding-left: 65px;
-}*/
+}
 
 .price-controls input {
   width: 50px;
@@ -769,16 +754,15 @@ input[type="checkbox"]:checked + .filter-label::before {
 }
 
 .range-controls .bar {
-    width: 80%;
+  width: 80%;
   height: 2px;
 
   background: #ffffff;
 }
 
 .range-toggle {
-    position: absolute;
+     position: absolute;
   top: -9px;
-    
   width: 4px;
   height: 4px;
 
@@ -818,6 +802,150 @@ input[type="checkbox"]:checked + .filter-label::before {
   cursor: pointer;
 }
 
+.choose-dwelling:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+.dwelling-choice-result {
+    min-height: 86px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.dwelling-found {
+    /*float: left;*/
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    height: inherit;
+    margin-left: 73px;
+    margin-right: 55px;
+    
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.sort-order {
+    /*float: left;*/
+    display: inline-block;
+    vertical-align: middle;
+    height: inherit;
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sort-order h2,
+.sort-order li {
+    display: inline-block;
+    margin: 0;
+    margin-right: 40px;
+    
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+.sort-order-link {
+    color: rgba(0, 0, 0, 0.3);
+    
+    border-bottom: 1px dotted #81b3d2;
+    text-decoration: none;
+}
+
+.sort-order .active {
+    color: #81b3d2;
+    border: 0;
+}
+
+.dwelling {
+    width: 100%;
+    min-height: 150px;
+    padding: 25px 6%;
+    box-sizing: border-box;
+    
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dwelling-photo,
+.dwelling-info {
+    float: left;
+    margin-right: 30px;
+}
+
+.dwelling-photo {
+    width: 135px;
+}
+
+.dwelling-info {
+    width: 350px;
+}
+
+.dwelling-rating {
+    float: right;
+    width: 130px;
+    
+    text-align: right;
+}
+
+.dwelling-name {
+    margin: 0;
+    margin-bottom: 7px;
+    
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.dwelling-type,
+.dwelling-minprice {
+    display: inline-block;
+    width: 110px;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+
+.detailed-info,
+.book,
+.rating {
+    display: inline-block;
+    padding: 3px 15px;
+    margin-right: 5px;
+    
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #81b3d2;
+}
+
+.book {
+    background-color: #766357;
+}
+
+.dwelling-rating span {
+    font-size: 19px;
+    color: #81b3d2;
+}
+
+.dwelling-rating .rating {
+    font-weight: 400;
+    color: #000000;
+    background-color: #f2f2f2;
+}
 
 https://nvpushkarskiy.github.io/28256-sedona/
 https://habrahabr.ru/post/281254/
