@@ -49,6 +49,51 @@ body {
 .icon-minus::before { content: "\e802"; } /* "" */
 .icon-youtube::before { content: "\f39e"; } /* "" */
 
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-advice-1 {
+    width: 75px;
+    height: 72px;
+    background-position: -10px -10px;
+}
+
+.sprite-advice-2 {
+    width: 74px;
+    height: 70px;
+    background-position: -10px -102px;
+}
+
+.sprite-advice-3 {
+    width: 64px;
+    height: 76px;
+    background-position: -10px -192px;
+}
+
+.sprite-html-logo {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -288px;
+}
+
+.sprite-html-logo-active {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -347px;
+}
+
+.sprite-html-logo-hover {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -406px;
+}
+
+
+
 .homepage-wrapper,
 .innerpage-wrapper {
     max-width: 1200px;
@@ -64,7 +109,7 @@ body {
 }
 
 .main-navigation {
-    margin: 0 10%;
+    margin: 0 6%;
 }
 
 .main-menu {
@@ -79,7 +124,7 @@ body {
     display: inline-block;
     width: 25%;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     
     text-align: left;
 }
@@ -106,7 +151,7 @@ body {
 }
 
 .main-menu-item a.active {
-    color: #604e43;
+    color: #766357;
 }
 .main-menu-item a.active:hover {
     color: #604e43;
@@ -134,9 +179,6 @@ body {
     background-repeat: no-repeat, no-repeat;
     background-position: bottom center, 50% 10%;
     background-size: 100% 57px, 100% auto;
-    
-    /*background: url(../img/mask.png) no-repeat bottom center;
-    background-size: 100% 57px;*/
 }
 
 .intro-message {
@@ -150,8 +192,8 @@ body {
 .features-caption {
     width: 100%;
     min-height: 217px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 45px;
+    padding-bottom: 30px;
     box-sizing: border-box;
     
     text-align: center;
@@ -159,6 +201,8 @@ body {
 }
 
 .features-caption h1 {
+    margin-bottom: 28px;
+    
     font-size: 21px;
     line-height: 26px;
     font-weight: 600;
@@ -183,7 +227,7 @@ body {
 .feature-item {
     display: table-cell;
     vertical-align: middle;
-    width: 33%;
+    width: 33.3%;
     min-height: 256px;
     padding: 0 50px;
     box-sizing: border-box;
@@ -236,7 +280,7 @@ body {
     vertical-align: top;
     min-height: 330px;
     padding: 0 50px;
-    padding-top: 160px;
+    padding-top: 143px;
     box-sizing: border-box;
     
     text-align: center;
@@ -275,30 +319,6 @@ body {
     background-position: -10px -192px; 
 }
 
-.sprite {
-    background-image: url(spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
-}
-
-.sprite-advice-1 {
-    width: 75px;
-    height: 72px;
-    background-position: -10px -10px;
-}
-
-.sprite-advice-2 {
-    width: 74px;
-    height: 70px;
-    background-position: -10px -102px;
-}
-
-.sprite-advice-3 {
-    width: 64px;
-    height: 76px;
-    background-position: -10px -192px;
-}
-
 /* Зантересовались? */
 
 .trip-plan {
@@ -318,7 +338,7 @@ body {
 }
 
 .trip-plan p {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .hotel-search {
@@ -436,7 +456,31 @@ body {
 .footer-copyright img {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 10px;
+}
+
+.footer-copyrigth .html-academy {
+    font-size: 0;
+}
+
+.footer-copyright .html-academy::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 113px;
+    height: 39px;
+    background-image: url(../img/spritesheet.png);
+    background-position: -10px -288px; 
+}
+
+.footer-copyright .html-academy:hover::after {
+    background-image: url(../img/spritesheet.png);
+    background-position: -10px -406px;
+}
+
+.footer-copyright .html-academy:active::after {
+    background-image: url(../img/spritesheet.png);
+    background-position: -10px -347px;
 }
 
 /* Форма поиска */
@@ -625,12 +669,12 @@ body {
 }
 
 .filters-block .dwelling-choice {
-    margin: 0 10%;
+    margin: 0 6%;
+    font-size: 0;
 }
 
 .filters-block fieldset {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 30%;
     margin-top: 30px;
     box-sizing: border-box;
@@ -680,7 +724,8 @@ input[type="checkbox"]:checked + .filter-label::before {
 /* Фильтр с ценой */
 
 .filters-block .price {
-    width: 330px;
+    float: right;
+    width: 33%;
 }
 
 .price legend {
@@ -725,8 +770,10 @@ input[type="checkbox"]:checked + .filter-label::before {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+    width: 50%;
+    padding-left: 15%;
+    box-sizing: border-box;
+    
 }
 
 .price-controls input {
@@ -811,18 +858,56 @@ input[type="checkbox"]:checked + .filter-label::before {
 .dwelling-choice-result {
     min-height: 86px;
     padding-top: 30px;
+    padding-left: 6%;
+    padding-right: 6%;
     box-sizing: border-box;
     
     border-bottom: 1px solid #e5e5e5; 
 }
 
+.choice-result {
+    float: left;
+    width: 600px;
+}
+
+.order-result {
+    float: right;
+    width: 70px;
+    
+    text-align: right;
+}
+
+.icon-up-dir::before,
+.icon-down-dir::before {
+    margin: 0;
+}
+
+.order-result .arrow {
+    color: #cccccc;
+}
+
+.order-result .arrow:hover {
+    color: #000000;
+}
+
+.order-result .arrow:active {
+    color: #81b3d2;
+}
+
+.order-result .active,
+.order-result .active:hover {
+    color: #81b3d2;
+}
+
+.order-result span {
+    font-size: 23px;
+}
+
 .dwelling-found {
-    /*float: left;*/
     display: inline-block;
     vertical-align: middle;
     margin: 0;
     height: inherit;
-    margin-left: 73px;
     margin-right: 55px;
     
     font-size: 21px;
@@ -831,7 +916,6 @@ input[type="checkbox"]:checked + .filter-label::before {
 }
 
 .sort-order {
-    /*float: left;*/
     display: inline-block;
     vertical-align: middle;
     height: inherit;
@@ -857,6 +941,15 @@ input[type="checkbox"]:checked + .filter-label::before {
     
     border-bottom: 1px dotted #81b3d2;
     text-decoration: none;
+}
+
+.sort-order-link:hover {
+    color: #81b3d2;
+}
+
+.sort-order-link:active {
+    color: #000000;
+    border: 0;
 }
 
 .sort-order .active {
@@ -900,13 +993,25 @@ input[type="checkbox"]:checked + .filter-label::before {
     text-align: right;
 }
 
-.dwelling-name {
+.dwelling-info h3 {
     margin: 0;
     margin-bottom: 7px;
-    
+} 
+
+.dwelling-name {    
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+}
+
+.dwelling-name:hover {
+    color: #81b3d2;
+}
+
+.dwelling-name:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .dwelling-type,
@@ -932,20 +1037,46 @@ input[type="checkbox"]:checked + .filter-label::before {
     background-color: #81b3d2;
 }
 
+.detailed-info:hover {
+    background-color: #669ec0;
+}
+
+.detailed-info:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+}
+
 .book {
     background-color: #766357;
 }
+
+.book:hover {
+    background-color: #604e43;
+}
+
+.book:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
+.book:hover {
+    background-color: #604e43;
+}
+
+
 
 .dwelling-rating span {
     font-size: 19px;
     color: #81b3d2;
 }
 
+.dwelling-rating .icon-star::before {
+    margin: 0;
+}
+
 .dwelling-rating .rating {
     font-weight: 400;
     color: #000000;
     background-color: #f2f2f2;
+    margin-top: 40px;
 }
-
-https://nvpushkarskiy.github.io/28256-sedona/
-https://habrahabr.ru/post/281254/
