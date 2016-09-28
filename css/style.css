@@ -191,7 +191,7 @@ body {
 
 .features-caption {
     width: 100%;
-    min-height: 217px;
+    height: 217px;
     padding-top: 45px;
     padding-bottom: 30px;
     box-sizing: border-box;
@@ -228,7 +228,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     width: 33.3%;
-    min-height: 256px;
+    height: 256px;
     padding: 0 50px;
     box-sizing: border-box;
     
@@ -278,7 +278,7 @@ body {
     display: table-cell;
     width: 33%;
     vertical-align: top;
-    min-height: 330px;
+    height: 330px;
     padding: 0 50px;
     padding-top: 143px;
     box-sizing: border-box;
@@ -362,11 +362,13 @@ body {
     background-color: #766357;
 }
 
-.hotel-search:hover {
+.hotel-search:hover,
+.dwelling .book:hover {
     background-color: #604e43;
 }
 
-.hotel-search:active {
+.hotel-search:active,
+.dwelling .book:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33;
 }
@@ -381,6 +383,10 @@ body {
     background: url(../img/map.jpg) no-repeat top center;
     background-size: cover;
     z-index: 10;
+}
+
+.map iframe {
+    width: 100%;
 }
 
 /* Футер */
@@ -439,15 +445,6 @@ body {
     line-height: 48px;
 }
 
-.social-net-link:hover {
-    background-color: #669ec0;
-}
-
-.social-net-link:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #5496bd;
-}
-
 .footer-copyright span {
     font-size: 14px;
 }
@@ -501,7 +498,17 @@ body {
     background-color: #ffffff;
     box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
     
+    display: none;
+}
+
+.modal-content-show {
     display: block;
+    animation: opacity 1s;
+}
+
+@keyframes opacity {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
 
 .form-section {
@@ -644,11 +651,15 @@ body {
     cursor: pointer;
 }
 
-.modal-submit-btn:hover {
+.modal-submit-btn:hover,
+.social-net-link:hover,
+.dwelling .detailed-info:hover {
     background-color: #669ec0;
 }
 
-.modal-submit-btn:active {
+.modal-submit-btn:active,
+.social-net-link:active,
+.dwelling .detailed-info:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
 }
@@ -925,7 +936,7 @@ input[type="checkbox"]:checked + .filter-label::before {
     list-style: none;
 }
 
-.sort-order h2,
+.sort,
 .sort-order li {
     display: inline-block;
     margin: 0;
@@ -959,7 +970,7 @@ input[type="checkbox"]:checked + .filter-label::before {
 
 .dwelling {
     width: 100%;
-    min-height: 150px;
+    height: 150px;
     padding: 25px 6%;
     box-sizing: border-box;
     
@@ -1037,33 +1048,9 @@ input[type="checkbox"]:checked + .filter-label::before {
     background-color: #81b3d2;
 }
 
-.detailed-info:hover {
-    background-color: #669ec0;
-}
-
-.detailed-info:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #5496bd;
-}
-
 .book {
     background-color: #766357;
 }
-
-.book:hover {
-    background-color: #604e43;
-}
-
-.book:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #503e33;
-}
-
-.book:hover {
-    background-color: #604e43;
-}
-
-
 
 .dwelling-rating span {
     font-size: 19px;
@@ -1080,3 +1067,4 @@ input[type="checkbox"]:checked + .filter-label::before {
     background-color: #f2f2f2;
     margin-top: 40px;
 }
+
